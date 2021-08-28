@@ -5,13 +5,13 @@
 
 @font-face {
   font-family: "GT Eesti Pro";
-  src: url("/fonts/GTEestiProText-Light.woff2") format("woff2"), url("/fonts/GTEestiProText-Light.woff") format("woff"), url("/fonts/GTEestiProText-Light.ttf") format("truetype");
+  src: url("../fonts/GTEestiProText-Light.woff2") format("woff2"), url("../fonts/GTEestiProText-Light.woff") format("woff"), url("../fonts/GTEestiProText-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "ClearfaceStd-Regular";
-  src: url("/fonts/ClearfaceStd-Regular.otf");
+  src: url("../fonts/ClearfaceStd-Regular.otf");
 }
 .test {
   box-sizing: border-box;
@@ -24,7 +24,7 @@
   position: relative;
 }
 .test__about {
-  background-image: url(/img/bgText.png);
+  background-image: url(../img/bgText.png);
   background-repeat: no-repeat;
   box-sizing: border-box;
   max-width: 470px;
@@ -66,7 +66,7 @@
   right: -100px;
   transform: translate(80px -100px);
   z-index: -1;
-  background-image: url(/img/bgImg.png);
+  background-image: url(../img/bgImg.png);
   background-repeat: no-repeat;
 }
 
