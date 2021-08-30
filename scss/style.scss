@@ -1,6 +1,9 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  transition: .3s;
+        
 }
 
 @font-face {
@@ -18,12 +21,12 @@
 
 .test{
   box-sizing: border-box;
-  padding: 120px;
+  padding: 120px 80px 0px 120px;
   margin: 0 auto;
   max-width: 1440px;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   position: relative;
   &__about {
     background-image: url(../img/bgText.png);
@@ -31,7 +34,7 @@
     box-sizing: border-box;
     max-width: 470px;
     width: 100%;
-    padding: 26px 0 0 43px;
+    padding: 26px 0 70px 43px;
     text-align: left;
     align-self: center;
     margin: 0 10px 0 0;
@@ -51,120 +54,66 @@
     }
   }
   &__img {
+    overflow: hidden;
+    padding: 0 80px 0 0 ;
+    flex: 0 1 auto;
     max-width: 620px;
     width: 100%;
-    img{
-      width: 100%;
-      height: 100%;
-      margin: 0 10px 0 0;
-    }
-  }
-  &__img::before{
-    content: "";
-    width: 496px;
-    height: 524px;
-    position: absolute;
-    top: 80px;
-    right: -100px;
-    transform: translate(80px -100px);
-    z-index: -1;
+    height: 500px;
     background-image: url(../img/bgImg.png);
     background-repeat: no-repeat;
-    
-  }
-}
-
-@media screen and(max-width:1352px) {
-  .test{
-    box-sizing: border-box;
-    padding: 60px 0 60px 30px;
-    margin: 0 auto;
-    max-width: 1440px;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-    &__about {
-      .about__header {
-        margin: 0 0 10px 0;
-      }
-    }
-    &__img {
-      margin: 0 50px 0 0;
-
-    }
-    &__img::before{
-      top: 80px;
-      right: -50px;
-      z-index: -1;
-    }
-  }
-}
-@media screen and(max-width:1099px) {
-  .test{
-    padding: 60px 0 60px 10px;
-    &__about {
-
-    }
-    &__img {
-      max-width: 420px;
+    background-position: bottom 0px right 0px;
+    &-slider{
+      max-width: 540px;
       width: 100%;
-      margin: 0 50px 0 0;
       img{
-        max-width: 420px;
         width: 100%;
+        max-height: 370px;
       }
-    }
-    &__img::before{
-
-      width: 396px;
-      height: 424px;
-      position: absolute;
-      top: 20px;
-      right: -50px;
-      background-size: 100%;
     }
   }
 }
 
-@media screen and(max-width:991px) {
+@media screen and (max-width: 1296px) {
   .test{
-    overflow: hidden;
-    padding: 20px 20px;
-    display: flex;
+    padding: 120px 20px 0px 30px;
+    &__about {
+      padding: 26px 0 70px 43px;
+      margin: 0 10px 0 0;
+    }
+    &__img {
+      &-slider{
+        img{
+          margin: 0 80px 0 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .test{
+    padding: 120px 20px 0px 20px;
     flex-direction: column-reverse;
-    justify-content: center;
     align-items: center;
     &__about {
-      margin: 120px 10px 0 10px ;
-      padding: 26px 0 0 0;
+      padding: 26px 43px 0px 43px;
       text-align: center;
-      align-self: center;
+      margin: 0 0px 0 0;
     }
     &__img {
-      align-self: center;
-      max-width: 470px;
-      margin: 0;
-      
-      img{
-        max-width: 470px;
-        min-height: 226px;
-        margin: 0;
-      }
-    }
-    &__img::before{
-      width: 394px;
-      height: 405px;
-      top: 60px;
-      right: -70px;
+      padding: 0 80px 130px 80px;   
+      height: auto;
+      background-size: 70%;
     }
   }
 }
-
-@media screen and(max-width:489px) {
+@media screen and (max-width: 575px) {
   .test{
+  padding: 80px 0px 0px 0px;
     &__about {
-     
+      margin: 40px 0px 0 0px;
+      padding: 26px 10px 0px 10px;
       .about__header {
         font-size: 28px;
       }
@@ -172,11 +121,18 @@
         font-size: 14px;
       }
     }
-    &__img::before{
-      width: 294px;
-      height: 305px;
-      top: 70px;
-      right: -50px;
+    &__img {
+      padding: 0 10px 100px 10px;
+      height: auto;
+      background-position: bottom 0px right -50px;
+      &-slider{
+        img{
+          margin: 0;
+          width: 100%;
+          max-height: 370px;
+          min-width: 300px;
+        }
+      }
     }
   }
 }

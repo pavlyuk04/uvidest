@@ -1,6 +1,6 @@
 window.onload = () => {
   $(document).ready(function(){
-    $('.test__img').slick({
+    $('.test__img-slider').slick({
       dots: true,
       slidesToShow: 1,
       slidesToScroll: 1,
